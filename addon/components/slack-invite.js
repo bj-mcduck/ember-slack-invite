@@ -13,11 +13,13 @@ export default Component.extend({
   email:       null,
 
   ajaxOptions(){
-    url: 'https://' + this.get('apiUrl') + '/api/users.admin.invite',
-    form: {
-      email:      this.get('email'),
-      token:      this.get('apiToken'),
-      set_active: true
+    return {
+      url: 'https://' + this.get('apiUrl') + '/api/users.admin.invite',
+      form: {
+        email:      this.get('email'),
+        token:      this.get('apiToken'),
+        set_active: true
+      }
     }
   },
 
