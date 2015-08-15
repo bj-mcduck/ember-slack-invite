@@ -1,8 +1,11 @@
 import Ember from 'ember';
 import ajax from 'ic-ajax';
+import layout from '../templates/components/slack-invite';
 const { Component } = Ember;
 
 export default Component.extend({
+  layout: layout,
+
   ajaxError:   null,
   ajaxOptions: null,
   apiToken:    null,
